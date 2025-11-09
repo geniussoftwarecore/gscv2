@@ -78,8 +78,8 @@ export function CRMShowcase() {
             viewport={{ once: true }}
           >
             {dir === 'rtl' 
-              ? 'نظام شامل لإدارة العملاء والمبيعات والدعم الفني'
-              : 'Comprehensive system for customer, sales, and support management'
+              ? 'نظام ERPNext v15 - حل شامل لإدارة العملاء والمبيعات والدعم الفني'
+              : 'ERPNext v15 - Comprehensive system for customer, sales, and support management'
             }
           </motion.p>
         </motion.div>
@@ -193,11 +193,14 @@ export function CRMShowcase() {
         >
           <Button
             size="lg"
+            asChild
             className="bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             data-testid="open-crm-demo"
           >
-            <ExternalLink className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-            {t('crm.openDemo')}
+            <a href="https://erpnext-demo.frappe.cloud/" target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              {t('crm.openDemo')}
+            </a>
           </Button>
         </motion.div>
       </div>
