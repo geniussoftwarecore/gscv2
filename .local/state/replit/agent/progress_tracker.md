@@ -11,3 +11,4 @@
 [x] 11. Connected home page ServicesGrid with /api/services - fetches real data and links to /services page (Nov 7, 2025)
 [x] 12. Updated Hero CTA button "ابدأ تجربتك المجانية" to link to ERPNext service page: /services/be5527f7-3381-48f8-9ff2-21132038ae59 (Nov 7, 2025)
 [x] 13. Updated Hero secondary CTA button "تواصل معنا" to link to contact page: /contact (Nov 7, 2025)
+[x] 14. Created PostgreSQL database for persistent data storage (Nov 9, 2025)
