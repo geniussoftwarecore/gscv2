@@ -930,15 +930,15 @@ export const webProjectOrders = pgTable("web_project_orders", {
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 }, (table) => ({
   // Indexes for performance
-  statusIdx: index("web_orders_status_idx").on(table.status),
-  projectTypeIdx: index("web_orders_project_type_idx").on(table.projectType),
-  customerEmailIdx: index("web_orders_customer_email_idx").on(table.customerEmail),
-  createdAtIdx: index("web_orders_created_at_idx").on(table.createdAt),
-  assignedToIdx: index("web_orders_assigned_to_idx").on(table.assignedTo),
+  statusIdx: index("web_project_orders_status_idx").on(table.status),
+  projectTypeIdx: index("web_project_orders_project_type_idx").on(table.projectType),
+  customerEmailIdx: index("web_project_orders_customer_email_idx").on(table.customerEmail),
+  createdAtIdx: index("web_project_orders_created_at_idx").on(table.createdAt),
+  assignedToIdx: index("web_project_orders_assigned_to_idx").on(table.assignedTo),
   
   // Composite indexes for common queries
-  statusCreatedIdx: index("web_orders_status_created_idx").on(table.status, table.createdAt),
-  projectTypeStatusIdx: index("web_orders_project_type_status_idx").on(table.projectType, table.status),
+  statusCreatedIdx: index("web_project_orders_status_created_idx").on(table.status, table.createdAt),
+  projectTypeStatusIdx: index("web_project_orders_project_type_status_idx").on(table.projectType, table.status),
 }));
 
 // Insert Schema for Web Project Orders

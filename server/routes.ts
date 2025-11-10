@@ -1046,13 +1046,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       let portfolioItems;
       
       if (category && typeof category === 'string') {
-        portfolioItems = await storage.getPortfolioItemsByCategory(category);
+        portfolioItems = await storage.instance.getPortfolioItemsByCategory(category);
       } else {
-        portfolioItems = await storage.getAllPortfolioItems();
+        portfolioItems = await storage.instance.getAllPortfolioItems();
       }
       
       res.json(portfolioItems);
     } catch (error) {
+      console.error('Portfolio fetch error:', error);
       res.status(500).json({ 
         success: false, 
         message: "Failed to fetch portfolio items" 
@@ -1064,7 +1065,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/portfolio/:slug", async (req, res) => {
     try {
       const { slug } = req.params;
-      const portfolioItems = await storage.getAllPortfolioItems();
+      const portfolioItems = await storage.instance.getAllPortfolioItems();
       const item = portfolioItems.find(p => p.slug === slug);
       
       if (!item) {
@@ -1076,6 +1077,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(item);
     } catch (error) {
+      console.error('Portfolio item fetch error:', error);
       res.status(500).json({ 
         success: false, 
         message: "Failed to fetch portfolio item" 

@@ -15,3 +15,6 @@
 [x] 15. Updated CRMShowcase section to reference ERPNext v15 and link demo button to official ERPNext demo (Nov 9, 2025)
 [x] 16. Completed Replit environment migration - workflow configured and verified (Nov 10, 2025)
 [x] 17. Updated "Talk to Sales Team" button in CRMShowcase to link to WhatsApp (Nov 10, 2025)
+[x] 18. Created PostgreSQL database and seeded with portfolio data (Nov 10, 2025)
+[x] 19. Fixed duplicate index names in schema (web_project_orders table) (Nov 10, 2025)
+[x] 20. Updated PortfolioPreview section to fetch real data from /api/portfolio and link to /portfolio page (Nov 10, 2025)
