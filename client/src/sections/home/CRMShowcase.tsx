@@ -460,7 +460,7 @@ export function CRMShowcase() {
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-text-primary px-8 py-6 rounded-xl transition-all duration-300"
               data-testid="contact-sales-cta"
             >
-              <a href="#contact">
+              <a href="https://wa.me/967735158003" target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="w-5 h-5 mr-2" />
                 {dir === 'rtl' ? 'تحدث مع فريق المبيعات' : 'Talk to Sales Team'}
               </a>

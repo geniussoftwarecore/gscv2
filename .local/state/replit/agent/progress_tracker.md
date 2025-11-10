@@ -14,3 +14,4 @@
 [x] 14. Created PostgreSQL database for persistent data storage (Nov 9, 2025)
 [x] 15. Updated CRMShowcase section to reference ERPNext v15 and link demo button to official ERPNext demo (Nov 9, 2025)
 [x] 16. Completed Replit environment migration - workflow configured and verified (Nov 10, 2025)
+[x] 17. Updated "Talk to Sales Team" button in CRMShowcase to link to WhatsApp (Nov 10, 2025)
